@@ -1,19 +1,9 @@
 package com.company;
-
 import java.util.Random;
 
-public class newPlayer {
+public class fighting {
 
-    player player = new player();
-
-
-    {
-        player.getName();
-        player.getDefence();
-        player.getHeath();
-        player.getPower();
-
-
+    public static void main(String[] args) {
         Random battle = new Random();
 
         player player = new player();
@@ -25,18 +15,11 @@ public class newPlayer {
         player tunderhouse = new player();
         player bigsmall = new player();
 
+
         jack.setDefence(5);
         jack.setPower(52);
         jack.setHeath(99);
 
+
     }
 }
-
-
-
-
-
-
-
-
-
