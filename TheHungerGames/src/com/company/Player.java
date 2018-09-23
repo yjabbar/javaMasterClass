@@ -1,12 +1,20 @@
 package com.company;
+import  java.util.Random;
 
-public class Player
+public class Player {
 
-{
+    Random rand = new Random();
     private int playerId;
-    private  String Gender;
-    private int AttackLevel;
-    private  int DefenceLevel;
+    private int heath = rand.nextInt(100) + 1;
+    private int attackLevel = rand.nextInt(100) + 1;
+    private int defenceLevel = rand.nextInt(100) + 1;
+
+    public Player(int playerId, int heath, int attackLevel, int defenceLevel) {
+        this.playerId = playerId;
+        this.heath = heath;
+        this.attackLevel = attackLevel;
+        this.defenceLevel = defenceLevel;
+    }
 
     public int getPlayerId() {
         return playerId;
@@ -16,38 +24,29 @@ public class Player
         this.playerId = playerId;
     }
 
-    public String getGender() {
-        return Gender;
+    public int getHeath() {
+        return heath;
     }
 
-    public void setGender(String gender) {
-        Gender = gender;
+    public void setHeath(int heath) {
+        this.heath = heath;
     }
 
     public int getAttackLevel() {
-        return AttackLevel;
+        return attackLevel;
     }
 
     public void setAttackLevel(int attackLevel) {
-        AttackLevel = attackLevel;
+        this.attackLevel = attackLevel;
     }
 
     public int getDefenceLevel() {
-        return DefenceLevel;
+        return defenceLevel;
     }
 
     public void setDefenceLevel(int defenceLevel) {
-        DefenceLevel = defenceLevel;
+        this.defenceLevel = defenceLevel;
+
+
     }
-
-    public int getHealthLevel() {
-        return HealthLevel;
-    }
-
-    public void setHealthLevel(int healthLevel) {
-        HealthLevel = healthLevel;
-    }
-
-    private  int HealthLevel;
-
 }
