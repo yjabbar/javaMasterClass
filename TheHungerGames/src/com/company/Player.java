@@ -4,25 +4,23 @@ import  java.util.Random;
 public class Player {
 
     Random rand = new Random();
-    private int playerId;
-    private int heath = rand.nextInt(100) + 1;
-    private int attackLevel = rand.nextInt(100) + 1;
-    private int defenceLevel = rand.nextInt(100) + 1;
+    private Gender gender;
+    private int heath, attackLevel, defenceLevel;
 
-    public Player(int playerId, int heath, int attackLevel, int defenceLevel) {
-        this.playerId = playerId;
-        this.heath = heath;
-        this.attackLevel = attackLevel;
-        this.defenceLevel = defenceLevel;
+        public Player(Gender gender, int heath, int attackLevel, int defenceLevel) {
+        this.heath = rand.nextInt(100+ 1);
+        this.attackLevel = rand.nextInt(100+1);
+        this.defenceLevel = rand.nextInt(100+1);
     }
 
-    public int getPlayerId() {
-        return playerId;
+    public Gender getGender() {
+        return gender;
     }
 
-    public void setPlayerId(int playerId) {
-        this.playerId = playerId;
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
+
 
     public int getHeath() {
         return heath;
