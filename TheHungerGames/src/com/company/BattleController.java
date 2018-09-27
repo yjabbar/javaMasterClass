@@ -1,22 +1,41 @@
 package com.company;
 
-import com.sun.org.apache.bcel.internal.generic.BALOAD;
+import java.util.Random;
 
 public class BattleController {
 
-    int totalPlayers = 24;
-    int alivePlayers = totalPlayers;
-    Gender gender;
-    int heath, attackLevel, defenceLevel;
+    int numberOfTotalPlayers = 24;
+    int numberOfAliveContestants = numberOfTotalPlayers;
+    Player[] players = new Player[numberOfTotalPlayers];
 
-    Player[] players = new Player[totalPlayers];
+    Gender gender;
+    int attackLevel, defenceLevel, heath;
+    Random random = new Random();
 
     public BattleController() {
 
+        for (int i = 0; i < numberOfTotalPlayers; i++) {
+            if (i % 2 == 0) {
+                attackLevel = random.nextInt(100);
+                defenceLevel = random.nextInt(100);
+                heath = random.nextInt(100);
+
+                players[i] = new Career(gender, i, attackLevel, defenceLevel, heath);
+            } else {
+                attackLevel = random.nextInt(100);
+                defenceLevel = random.nextInt(100);
+                heath = random.nextInt(100);
+
+                players[i] = new District(gender, i, attackLevel, defenceLevel, heath);
+            }
+        }
+        System.out.println(players[0]);
+        System.out.println(players[1]);
 
     }
-}
 
+
+    }
 
 
 
